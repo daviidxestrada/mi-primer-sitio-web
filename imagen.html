@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes en HTML</title>
+</head>
+
+<body>
+
+    <article>
+        <figure>
+            <h3>Slider 1</h3>
+           <img src="assets/slider1.jpg" alt="Texto alternativo a la foto de Logos" 
+                title="Este es el title de la imagen">
+           <figcaption id="pie de foto"> pie de la foto uno</figcaption>
+        </figure>
+    
+     <!--escritorio
+          2000px
+
+        tablet
+          900px
+
+        movil
+          650px
+     -->
+        <picture>
+            <source media="(min-width:1200px)" srcset="assets/botellas.png">
+            <source media="(min-width:900px)" srcset="assets/slider6.jpg">
+             <img src="assets/casecons.jpg" alt="casecons">
+        </picture>
+
+
+        <img src="assets/slider4.jpg" alt="Texto alternativo a la foto de Logos" title="Este es el title de la imagen">
+
+    </article>
+    
+ <!--   <img src="assets/tovec.png" alt="Texto alternativo a la foto de Logos" title="Este es el title de la imagen"> -->
+
+</body>
+
+</html>
