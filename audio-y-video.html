@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio y video</title>
+</head>
+
+
+<body>
+
+    <video controls loop preload="none" poster="/assets/audio-video/poster.png">
+        <source src="assets/audio-video/aotttt.mp4" type="video/mp4">
+        <source src="assets/audio-video/aotttt.ogv" type="video/ogv">
+        <p>Lo sentimos, tu navegador no acepta video</p>
+    </video>
+
+    <iframe
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/Gzxnz4xmOMk?si=V8x-A6oZ7GcDlxS6" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+    </iframe>
+
+    <audio src="assets/audio-video/aotttt.mp3" controls autoplay preload="auto">
+        <source src="assets/audio-video/aotttt.mp3" type="audio/mp3">
+        <source src="assets/audio-video/aotttt.ogg" type="audio/ogg">
+
+    </audio>
+</body>
+</html>
