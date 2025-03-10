@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <form action="enviar.php" method="get" autocomplete="off" id="formulario" name="formulario">
+        <fieldset>
+            <legend>Datos personales</legend>
+           <label>Nombre: 
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+        </label>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" > 
+        <input type="number" id="edad" name="edad" placeholder="Escribe tu edad" min="20" max="40" step="5">
+        <input type="email" id="email" name="email" placeholder="Escribe tu email">
+        </fieldset>
+        
+    <fieldset>
+        <legend>Datos de inscripción</legend>
+        <input type="week" id="semana" name="semana">
+        <input type="file">
+    </fieldset>
+       
+
+        <input type="submit">
+    </form>
+</body>
+</html>
