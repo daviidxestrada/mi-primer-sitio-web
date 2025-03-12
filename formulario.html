@@ -9,11 +9,13 @@
     <form action="enviar.php" method="get" autocomplete="off" id="formulario" name="formulario">
         <fieldset>
             <legend>Datos personales</legend>
+            <input type="text" id="id" name="id" value="10" readonly>
            <label>Nombre: 
-            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required maxlength="10" minlength="5"
+            readonly>
         </label>
         <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" > 
+        <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido" disabled> 
         <input type="number" id="edad" name="edad" placeholder="Escribe tu edad" min="20" max="40" step="5">
         <input type="email" id="email" name="email" placeholder="Escribe tu email">
         </fieldset>
@@ -22,6 +24,40 @@
         <legend>Datos de inscripción</legend>
         <input type="week" id="semana" name="semana">
         <input type="file">
+
+      <div>
+     <label for="maniana">Mañana</label>
+     <input type="radio" id="maniana" name="turno" value="mañana">
+     <label for="tarde">Tarde</label>
+     <input type="radio" id="tarde" name="turno" value="tarde">
+     <label for="noche">Noche</label>
+     <input type="radio" id="noche" name="turno" value="noche">
+      </div>
+
+     <div>
+        <label for="online">On-line</label>
+        <input type="checkbox" id="online" name="online" value="si">
+        <label for="presencial">Presencial</label>
+        <input type="checkbox" id="presencial" name="presencial" value="si">
+        <label for="hibrido">Híbrido</label>
+        <input type="checkbox" id="hibrido" name="hibrido" value="si">
+    </div>
+
+   <select id="donde" name="donde">
+     <option value="madrid">Madrid</option>
+     <option value="cordoba">Córdoba</option>
+     <option value="Jaen">Jaen</option>
+   </select>
+
+   <input type="text" id="tema" name="tema" list="lista-temas">
+
+   <datalist id="lista-temas" name="lista-temas">
+     <option value="HTML">HTML</option>
+     <option value="CSS">CSS</option>
+     <option value="Javascript">Javascript</option>
+
+   </datalist>
+
     </fieldset>
        
 
