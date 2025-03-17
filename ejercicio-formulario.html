@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de formularios</title>
+</head>
+<body>
+
+    <h1>Ejercicio de Formularios</h1>
+
+    <h2>Formulario 1</h2>
+    <form>
+ <fieldset>
+    <legend>Datos personales</legend>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required autofocus> <br><br>
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" placeholder="Escribe tus apellidos" required> <br><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" placeholder="Tu edad" min="1" max="120" required> <br><br> 
+
+    <label>Sexo</label><br>
+    <input type="radio" id="hombre" name="sexo" value="hombre" required>
+    <label for="hombre">Hombre</label>
+
+    <input type="radio" id="mujer" name="sexo" value="mujer">
+    <label for="mujer">Mujer</label>
+
+    <input type="radio" id="otro" name="sexo" value="otro">
+    <label for="otro">Otro</label>
+
+    <br><br>
+
+    <input type="checkbox" id="club" name="club">
+    <label for="club">Me siento del club</label>
+
+    <br><br>
+
+    <label for="descripcion">Escribe algo sobre ti:</label> <br>
+    <textarea id="descripción" name="descripcion" rows="4" cols="40" placeholder="Cuéntanos sobre ti..." required></textarea>
+
+
+</fieldset>
+
+
+    <br><br>
+
+    <fieldset>
+    
+        <legend>Datos de contacto</legend>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required> <br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ej: +34 600 000 000" pattern="[0-9]{9}" required> <br><br>
+
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Borrar</button>
+
+ </form>
+    
+ <h2>Formulario 2</h2>
+
+ <form>
+    
+    <fieldset>
+
+         <legend>Registrar el robo de la bicicleta</legend>
+         <label for="dia">Día</label>
+         <input type="date" id="dia" name="dia" required> <br><br>
+
+         <label for="hora">Hora</label>
+         <input type="time" id="hora" name="hora" required> <br><br>
+
+         <label for="color">Color de la bicicleta</label>
+         <input type="color" id="color" name="color" required> <br><br>
+
+         <label for="precio">Rango de precio</label>
+         <input type="range" id="precio" name="precio" min="100" max="5000" step="100" value="1000" oninput="precioValor.value = precio.value">
+         <output id="precioValor">1000</output> € <br><br>
+
+         <label for="tipoBici">Tipo de bicicleta</label>
+         <select id="tipoBici" name="tipoBici" required>
+
+         <optgroup label="Urbana">
+            <option value="clasica">Bicicleta clásica</option>
+            <option value="plegable">Bicicleta plegable</option>
+            <option value="electrica">Bicicleta eléctrica</option>
+            <option value="commuter">Bicicleta commuter</option>
+         </optgroup>
+
+         <optgroup label="Montaña">
+            <option value="sport">Bicicleta sport</option>
+            <option value="trail">Bicicleta trail</option>
+            <option value="xc">Bicicleta XC</option>
+         </optgroup>
+
+         <optgroup label="Carreras">
+            <option value="granFondo">Bicicleta Gran Fondo</option>
+            <option value="racing">Bicicleta Racing</option>
+            <option value="aero">Bicicleta Aero</option>
+         </optgroup>
+         </select> <br><br>
+    
+    </fieldset>
+
+    
+     
+
+ </form>
+
+</body>
+</html>
