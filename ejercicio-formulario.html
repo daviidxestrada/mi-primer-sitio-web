@@ -10,39 +10,44 @@
     <h1>Ejercicio de Formularios</h1>
 
     <h2>Formulario 1</h2>
-    <form>
- <fieldset>
+    <form action="#" method="post" autocomplete="off" id="registrarse" name="registrarse">
+     <h3>Registrarse en el club</h3>
+      <fieldset>
     <legend>Datos personales</legend>
-
+<div>
     <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required autofocus> <br><br>
-
+    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" tabindex="1" required autofocus> <br><br>
+</div>
+<div>
     <label for="apellidos">Apellidos:</label>
-    <input type="text" id="apellidos" name="apellidos" placeholder="Escribe tus apellidos" required> <br><br>
-
+    <input type="text" id="apellidos" name="apellidos" placeholder="Escribe tus apellidos" tabindex="2" required> <br><br>
+</div>
+<div>
     <label for="edad">Edad:</label>
-    <input type="number" id="edad" name="edad" placeholder="Tu edad" min="1" max="120" required> <br><br> 
-
+    <input type="number" id="edad" name="edad" tabindex="3" placeholder="Tu edad" min="1" max="120" required> <br><br> 
+</div>
+<div>
     <label>Sexo</label><br>
-    <input type="radio" id="hombre" name="sexo" value="hombre" required>
+    <input type="radio" id="hombre" name="sexo" value="hombre" tabindex="4" required>
     <label for="hombre">Hombre</label>
 
-    <input type="radio" id="mujer" name="sexo" value="mujer">
+    <input type="radio" id="mujer" name="sexo" value="mujer" tabindex="5">
     <label for="mujer">Mujer</label>
 
-    <input type="radio" id="otro" name="sexo" value="otro">
+    <input type="radio" id="otro" name="sexo" value="otro" tabindex="6">
     <label for="otro">Otro</label>
-
+</div>
     <br><br>
 
-    <input type="checkbox" id="club" name="club">
+<div>
+    <input type="checkbox" id="club" name="club" tabindex="7">
     <label for="club">Me siento del club</label>
-
+</div>
     <br><br>
-
+<div>
     <label for="descripcion">Escribe algo sobre ti:</label> <br>
-    <textarea id="descripción" name="descripcion" rows="4" cols="40" placeholder="Cuéntanos sobre ti..." required></textarea>
-
+    <textarea id="descripcion" name="descripcion" rows="10" cols="40" placeholder="Cuéntanos sobre ti..." required tabindex="8"></textarea>
+</div>
 
 </fieldset>
 
@@ -52,17 +57,22 @@
     <fieldset>
     
         <legend>Datos de contacto</legend>
-
+<div>
         <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required> <br><br>
-
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required tabindex="9"> <br><br>
+</div>
+<div>
         <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Ej: +34 600 000 000" pattern="[0-9]{9}" required> <br><br>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ej: +34 600 000 000" pattern="[0-9]{9}" required tabindex="10"> <br><br>
+</div>
+
+<div>
+<button type="submit" value="Enviar" tabindex="11">Enviar</button>
+<button type="reset" value="Limpiar" tabindex="12">Borrar</button>
+</div>
 
     </fieldset>
 
-    <button type="submit">Enviar</button>
-    <button type="reset">Borrar</button>
 
  </form>
     
@@ -108,10 +118,50 @@
             <option value="aero">Bicicleta Aero</option>
          </optgroup>
          </select> <br><br>
-    
+
+         <label for="accesorios">Accesorios</label>
+         <select id="accesorios" name="accesorios" multiple size="6">
+            <option value="ruedines">Ruedines</option>
+            <option value="hinchadores">Hinchadores</option>
+            <option value="rodillos">Rodillos</option>
+            <option value="bomba">Bomba</option>
+            <option value="alforja">Alforja</option>
+            <option value="silla">Silla</option>
+         </select> <br><br>
+
+         <label for="marca">¿Que marca era?</label>
+         <input list="marca" name="marca" placeholder="Selecciona o escribe la marca" required>
+
+         <datalist id="marca">
+             <option value="Specialized">
+             <option value="Trek">
+             <option value="Merida">
+             <option value="Scott">
+             <option value="Giant">
+             <option value="Cube" >
+             <option value="Lapierre">
+             <option value="Orbea">
+             <option value="Cannondale">
+             <option value="BMC">
+             <option value="Canyon">
+             <option value="Look">
+             <option value="Protek">
+             <option value="Megamo">
+             <option value="Pinarello">
+             <option value="Bianchi">
+             <option value="BH"> 
+             <option value="Factor">
+             <option value="Ghost">
+             <option value="Cervélo">
+             <option value="Argon">          
+         </datalist>
+      <br><br>
+   <button type="submit">Enviar</button>
+   <button type="reset">Borrar</button>
+       
     </fieldset>
 
-    
+    <br><br>
      
 
  </form>
